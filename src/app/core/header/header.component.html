@@ -1,0 +1,55 @@
+<!--header-area-->
+<div class="header-area" [class.change-bg]="slide">
+    <div class="container" [ngSwitch]="searchBar">
+     <div class="header-main" >
+         <!---logo-->
+         <div class="bar" [class.bar-active]="slide" (click)="slideToggle()">
+            <ul style="text-align: left;">
+                <li></li>
+                <li></li>
+             </ul>
+         </div>
+         <div class="logo" [class.animation]="searchBar">
+             <a routerLink="/"><img src="./assets/images/image/Component 5 – 2.svg" alt=""></a>
+         </div>
+         <!--menu-area-->
+         <div class="menu-area" [class.animation]="searchBar">
+             <ul>
+                 <li><a routerLink="/">Home</a></li>
+                 <li><a routerLink="/">Motto</a></li>
+                 <li><a routerLink="/">About</a></li>
+                 <li><a routerLink="../services">Services</a></li>
+                 <li><a routerLink="../get-in-touch">Contact</a></li>
+             </ul>
+         </div>
+         <!---icon-menu-->
+         <div class="icon-menu" [class.animation]="searchBar">
+             <ul>
+                 <li ><span (click)="searchBoxShow()"></span></li>
+             </ul>
+         </div>
+     </div>
+      <!---search-box-area  -->
+      <div class="search-box-area" [class.search-box-active]="searchBar">
+        <button class="search-icon"></button>
+        <input type="text" value="" placeholder="Search Kettop.com">
+        <button (click)='searchBoxHide()'><i class="fa fa-xmark"></i></button>
+     </div>
+    </div>
+    <!---responsive-menu-->
+    <div class="slide-menu" [class.slide-menu-active]="slide">
+        <div class="responsive-search">
+            <button><i class="fa fa-search"></i></button>
+            <input type="text" value="" placeholder="Search Ait.com">
+        </div>
+        <div class="res-menu">
+            <ul>
+                <li><a  routerLink="/" (click)="slideToggle()">Home</a></li>
+                <li><a  (click)="slideToggle()">Motto</a></li>
+                <li><a  (click)="slideToggle()">About</a></li>
+                <li><a  (click)="slideToggle()"  routerLink="../services">Services</a></li>
+                <li><a routerLink="./../get-in-touch" (click)="slideToggle()">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+ </div>

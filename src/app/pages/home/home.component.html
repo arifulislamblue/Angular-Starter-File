@@ -1,0 +1,173 @@
+
+
+<!---banner-area-->
+<div class="banner-area">
+    <div class="container">
+        <div class="banner-main">
+            <h3>The best <b>Branding</b> Solutions</h3>
+            <p>We build brand with satisfaction</p>
+            <a href="#" class="btn btn-change">Contact Us</a>
+            
+        </div>
+        <div class="banner-img">
+            <img src="./assets/images/image/banner.png" alt="">
+        </div>
+    </div>
+    <!--arrow-->
+    <div class="arrow">
+        <span (click)="scrollBottom(down)"><i class="fa fa-arrow-down"></i></span>
+    </div>
+</div>
+<!---section2-->
+<div class="section2" #down>
+    <div class="container">
+        <div class="section2-main">
+            <!---section2-top-->
+            <div class="section2-top">
+                    <h3>Kettop transforms customer experiences and drives growth by fusing innovation and brand.</h3>
+            </div>
+            <!---section2-img-->
+            <div class="section2-img">
+                <img src="./assets/images/image/Mask Group 3.png" alt="">
+            </div>
+            <!---section2-description-->
+            <div class="section2-description">
+                <p>Branding expresses what an entire organization stands for across all aspects of its business innovation delivers new signature experiences through design to meet consumer needs we connect branding and innovation to create value for you and your customers. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---section3-->
+<div class="section3">
+    <div class="container">
+        <div class="section3-main">
+            <!--section3-left-->
+            <div class="section3-left">
+                <img src="/assets/images/image/Ariful Islam.jpg" alt="">
+            </div>
+            <div class="section3-right">
+                <div>
+                    <h3>Brands That Move</h3>
+                    <p><b>Kettop</b> is a brand-first creative agency. Rooted in strategy, driven by design, and built for digital,our work unclocks the cultural and creative value of the world's most beloved brands.</p>
+                    <a routerLink="./../get-in-touch"class="btn btn-change">Play Reel <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---section1-->
+<div class="section1" #why>
+    <div class="container">
+        <div class="section1-title">
+            <h3>Our Services</h3>
+        </div>
+        <!---section1-main-->
+        <div class="section1-main">
+            <!---card-->
+            <div class="card">
+                <!--card-icon-->
+                <div class="card-icon">
+                    <img src="./assets/images/image/report.svg" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Brand Strategy</h3>
+                    <p>Create the essential foundation for brand building a clear brand definition & Positioning.</p>
+                </div>
+            </div><!---end-->
+               <!---card-->
+               <div class="card">
+                <!--card-icon-->
+                <div class="card-icon">
+                    <img src="./assets/images/image/technorati.svg" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Brand Naming </h3>
+                    <p>Develop a category-defining awnable brand name that breaks through the noise.</p>
+                </div>
+            </div><!---end-->
+               <!---card-->
+               <div class="card">
+                <!--card-icon-->
+                <div class="card-icon">
+                    <img src="./assets/images/image/scale.svg" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Brand Identity</h3>
+                    <p>Design a modern and iconic logo and visual branding system that makes you strategy visible.</p>
+                </div>
+            </div><!---end-->
+               <!---card-->
+               <div class="card">
+                <!--card-icon-->
+                <div class="card-icon">
+                    <img src="./assets/images/image/support.svg" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Brand Research</h3>
+                    <p>Unlock data-driven insights to guide the development,validation and performance of new brands.</p>
+                </div>
+            </div><!---end-->
+        </div>
+    </div>
+</div>
+<!---section4-->
+<div class="section4">
+    <div class="section4-main">
+        <!--project-area-->
+        <div class="project-area">
+            <!---section4-info-->
+            <div class="project-info" *ngFor="let data of  projectList">
+                <img [src]="data?.projectImage" [alt]="data?.projectName">
+               <div class="project-name" [routerLink]="[data?.routerLink]">
+                <a [routerLink]="[data?.routerLink]"  class="btn">{{data?.      projectName}}</a>
+               </div>
+            </div><!---end-->
+        </div>
+        <!---section4-btn-->
+        <div class="section4-btn">
+            <a href="#" class="btn btn-change">Show More</a>
+        </div>
+    </div>
+</div>
+<!---section5-->
+<div class="section5">
+    <div class="container">
+        <div class="section5-title">
+             <h3>Our Branding Partner</h3>
+        </div>
+        <!--section5-main-->
+        <div class="section5-main">
+            <swiper
+                [slidesPerView]="1"
+                [spaceBetween]="20"
+                [navigation]="true"
+                [autoplay]="true"
+                [breakpoints]="{
+                '0': {
+                    slidesPerView: 3
+                },
+                '768': {
+                    slidesPerView: 4
+                },
+                '1024': {
+                    slidesPerView: 5
+                }
+                }"
+                class="mySwiper"
+            >
+                <ng-template swiperSlide *ngFor="let brand of brandLogo">
+                    <!--brand-logo-->
+                    <div class="brand-logo">
+                       <a [routerLink]="[brand?.routerLink]" > <img [src]="brand?.brandImage" alt=""></a>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+</div>
+
+
+
+

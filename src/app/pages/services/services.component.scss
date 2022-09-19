@@ -1,0 +1,71 @@
+@import'src/theme/variables';
+.section1{
+    min-height: 100vh;
+    background-color: #f9f5f5;
+    padding: 80px 15px;
+    margin-top: 55px;
+    box-sizing: border-box;
+}
+.section1-main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+@media(max-width:1100px){
+    .section1-main{
+        grid-gap: 20px;
+    }
+}
+@media(max-width:1100px){
+    .section1-main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+@media(max-width:600px){
+    .section1{
+        padding: 50px 15px;
+    }
+    .section1-main{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        max-width: 450px;
+        margin: auto;
+        width: 100%;
+    }
+}
+.project-card{
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 10%);
+}
+.card-img{
+    display: block;
+}
+.card-img img{
+    max-height: 360px;
+    object-fit: cover;
+}
+.project-name{
+    display: block;
+    text-align: center;
+    padding: 40px 10px;
+    box-sizing: border-box;
+}
+.project-name a{
+    color: #213121;
+    font-family: $font-en-primary;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: normal;
+}
+.section1-btn{
+    display: block;
+    margin-top: 60px;
+}
+.section1-btn .btn{
+    text-transform: capitalize;
+    border-color: #4d4c4c;
+}

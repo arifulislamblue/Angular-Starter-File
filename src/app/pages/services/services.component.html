@@ -1,0 +1,22 @@
+<div class="section1">
+    <div class="container">
+        <!---section1-main-->
+        <div class="section1-main">
+            <!---project-card-->
+            <div class="project-card" *ngFor="let data of projectList">
+                <!---card-img-->
+                <div class="card-img">
+                     <img [src]="data?.projectImage" [alt]="data?.projectName">
+                </div>
+                <!--project-name-->
+                <div class="project-name">
+                    <a [routerLink]="[data?.routerLink]"  >{{data?.projectName}}</a>
+                </div>
+            </div>
+        </div>
+        <!---section1-btn-->
+        <div class="section1-btn">
+            <a href="#" class="btn btn-change">Load More</a>
+        </div>
+    </div>
+</div>
